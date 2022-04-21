@@ -1,0 +1,352 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  -webkit-animation-name: appear;
+          animation-name: appear;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+}
+
+.modal-dialog {
+  width: 100%;
+  max-width: 550px;
+  background: white;
+  position: relative;
+  margin: 0 20px;
+  max-height: calc(100vh - 40px);
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-name: slide-in;
+          animation-name: slide-in;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+.modal-header, .modal-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.modal-header {
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal-footer {
+  border-top: 1px solid #dbdbdb;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.modal-close {
+  cursor: pointer;
+  padding: 1rem;
+  margin: -1rem -1rem -1rem auto;
+}
+
+.modal-body {
+  overflow: auto;
+}
+
+.modal-content {
+  padding: 1rem;
+}
+
+.modal-title {
+  margin: 0;
+}
+
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-in {
+  from {
+    -webkit-transform: translateY(-150px);
+            transform: translateY(-150px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    -webkit-transform: translateY(-150px);
+            transform: translateY(-150px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.table {
+  width: 100%;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-collapse: collapse;
+}
+
+.table td:nth-child(1) {
+  white-space: nowrap;
+}
+
+.table th,
+.table td {
+  text-align: center;
+  padding: 10px;
+}
+
+.table th {
+  background-color: #1e88e5;
+  color: #fff;
+}
+
+.table tr:nth-child(even) {
+  background: #e6e6e6;
+}
+
+.table tr {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.table td:not(:last-child) {
+  border-right: 1px solid #ccc;
+}
+
+@media (max-width: 1000px) {
+  .table-2 {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+  }
+  .table-2 thead,
+  .table-2 tbody,
+  .table-2 thead th {
+    display: block;
+  }
+  .table-2 thead {
+    float: left;
+  }
+  .table-2 tbody {
+    overflow-x: auto;
+  }
+  .table-2 tbody tr {
+    display: table-cell;
+    border-right: 1px solid #ccc;
+  }
+  .table-2 tbody tr:last-child {
+    border-right: none;
+  }
+  .table-2 td {
+    display: block;
+  }
+  .table-2 td,
+  .table-2 th {
+    padding: 10px 5px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    overflow: hidden;
+    width: 200px;
+    font-size: 13px;
+    text-overflow: ellipsis;
+  }
+  .table-2 tr:nth-child(even) {
+    background: none;
+  }
+  .table-2 tr:hover {
+    background: none;
+  }
+  .table-2 td:not(:last-child) {
+    border-right: none;
+  }
+  .table-2 th:nth-child(even) {
+    background: #3b97e8;
+  }
+  .table-2 td:nth-child(even) {
+    background: #efefef;
+  }
+}
+
+html {
+  background-color: #fff;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+.main {
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.btn {
+  background-color: #4CAF50;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.btn-success {
+  background-color: white;
+  border: 2px solid #4CAF50;
+  color: black;
+}
+
+.btn-success:hover {
+  background-color: #4CAF50;
+}
+
+.btn-danger {
+  background-color: white;
+  border: 2px solid #f44336;
+  color: black;
+}
+
+.btn-danger:hover {
+  background-color: #f44336;
+}
+
+.header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.end {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+/*# sourceMappingURL=App.css.map */

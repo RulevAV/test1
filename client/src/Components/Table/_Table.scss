@@ -1,0 +1,102 @@
+$header-background: #1e88e5;
+$header-text:#fff;
+$row:#fff;
+
+.table {
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-collapse: collapse;
+
+  & td:nth-child(1) {
+    white-space: nowrap;
+  }
+
+  & th,
+  & td {
+    text-align: center;
+    padding: 10px;
+  }
+
+  & th {
+    background-color: $header-background;
+    color: $header-text;
+  }
+
+  & tr:nth-child(even) {
+    background: darken($row, 10%);
+  }
+
+  & tr {
+    transition: all .3s;
+  }
+
+  & td:not(:last-child) {
+    border-right: 1px solid #ccc;
+  }
+}
+
+@media (max-width:1000px) {
+  .table-2 {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+
+    & thead,
+    & tbody,
+    & thead th {
+      display: block;
+    }
+
+    & thead {
+      float: left;
+    }
+
+    & tbody {
+      overflow-x: auto;
+    }
+
+    & tbody tr {
+      display: table-cell;
+      border-right: 1px solid #ccc;
+    }
+
+    & tbody tr:last-child {
+      border-right: none;
+    }
+
+    & td {
+      display: block;
+    }
+
+    & td,
+    & th {
+      padding: 10px 5px;
+      box-sizing: border-box;
+      overflow: hidden;
+      width: 200px;
+      font-size: 13px;
+      text-overflow: ellipsis;
+    }
+
+    & tr:nth-child(even) {
+      background: none;
+    }
+
+    & tr:hover {
+      background: none;
+    }
+
+    & td:not(:last-child) {
+      border-right: none;
+    }
+
+    & th:nth-child(even) {
+      background: lighten($header-background, 6.25%);
+    }
+
+    & td:nth-child(even) {
+      background: darken($row, 6.25%);
+    }
+
+  }
+}
